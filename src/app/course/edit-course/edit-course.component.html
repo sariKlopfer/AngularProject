@@ -1,0 +1,41 @@
+<p>edit-course works!</p>
+<!-- [formGroup]="editCourseForm" -->
+<h2>Edit Course</h2>
+<form  (ngSubmit)="onSubmit()">
+  <div>
+    <label for="courseName">Course Name</label>
+    <input type="text" formControlName="courseName" id="courseName">
+  </div>
+  <div>
+    <label for="categoryId">Category ID</label>
+    <input type="number" formControlName="categoryId" id="categoryId">
+  </div>
+  <div>
+    <label for="severalLessons">Number of Lessons</label>
+    <input type="number" formControlName="severalLessons" id="severalLessons">
+  </div>
+  <div>
+    <label for="startDate">Start Date</label>
+    <input type="date" formControlName="startDate" id="startDate">
+  </div>
+  <div>
+    <label for="syllabus">Syllabus</label>
+    <textarea formControlName="syllabus" id="syllabus"></textarea>
+  </div>
+  <div>
+    <label for="throughLearning">Through Learning</label>
+    <select formControlName="throughLearning" id="throughLearning">
+      <option *ngFor="let way of learningWays" [value]="way">{{ way }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="lecturerId">Lecturer ID</label>
+    <input type="number" formControlName="lecturerId" id="lecturerId">
+  </div>
+  <div>
+    <label for="imgURL">Image URL</label>
+    <input type="text" formControlName="imgURL" id="imgURL">
+  </div>
+  <button type="submit">Save Changes</button>
+</form>
+

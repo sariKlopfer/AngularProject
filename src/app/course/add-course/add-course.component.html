@@ -1,0 +1,67 @@
+<!-- [formGroup]="addCourse" -->
+ <div>
+    <form  class="CourseForm" (ngSubmit)="onSubmit()">
+        <div class="formGroup">
+            <label for="courseCode">code</label>
+            <input type="number" formControlName="courseCode" class="form-control">
+        </div>
+        <div class="formGroup">
+            <label for="courseName">course name</label>
+            <input type="text" formControlName="courseName" class="form-control">
+        </div>
+        <!-- <div class="formGroup">
+            <label for="categoryId">categoryId</label>
+            <input type="number" formControlName="categoryId" class="form-control">
+        </div> -->
+        <div class="formGroup">
+            <label for="">severalLessons</label>
+            <input type="number" formControlName="severalLessons" class="form-control">
+        </div>
+        <div class="formGroup">
+            <label for="dateStart">startDate</label>
+            <input type="date" formControlName="startDate" class="form-control">
+        </div>
+        <div class="formGroup">
+            <label for="sillybus">sillybus</label>
+            <input type="text" formControlName="sillybus" class="form-control">
+        </div> 
+         <div class="formGroup">
+            <label for="throughLearning">throughLearning</label>
+            <select formControlName="throughLearning" class="form-control">
+                <option value="zoom">zoom</option>
+                <option value="frontat">frontat</option>
+                <!-- <option @for(learningWay of throughLearning )>{{  learningWay['value']}}</option> -->
+                <!-- <option *ngFor="let learningWay of throughLearning | keyvalue" [value]="learningWay.key">{{ learningWay.value}}</option> -->
+            </select>
+        </div> 
+        <div class="formGroup">
+            <label for="lecturerId">lecturerId</label>
+            <input type="number" formControlName="lecturerId" class="form-control">
+        </div>
+        <div class="formGroup">
+            <label for="imgURL">imgURL</label>
+            <input type="string" formControlName="imgURL" class="form-control">
+        </div>
+        <div>
+            <label for="categoryId">Category</label>
+            <select name="categoryId" id="">
+                <option value="category1">Programming</option>
+                <option value="category2">Graphic Design</option>
+                <option value="category3">Computer Science</option>
+                <option value="category4">Busines Management</option>
+                <option value="category5">Programming Languages</option>
+                <option value="category6">Internet and Networking</option>
+                <option value="category7">Information Security</option>
+                <option value="category8">Mobile App Development</option>
+                <option value="category9">Project Management</option>
+                <option value="category10">Data Analysis</option>
+                <option value="category11">Web Development</option>
+                <option value="category12">Entrepreneurship and Innovation</option>
+                <option value="category13">Enterprise Software</option>
+                <option value="category14">Digital Media</option>
+                <option value="category15">Gaming Industry</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-dark">send</button>
+    </form>
+  </div> 
